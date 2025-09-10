@@ -1,3 +1,6 @@
+from typing import List
+from collections import Counter
+
 # leetcode question number 34
 class Solution:
     def firstOcc(self, nums: List[int], target: int) -> int:
@@ -56,3 +59,25 @@ class Solution:
                     j-=1
                 elif a[j]==b or a[i]!=b:
                     i+=1
+
+# leetcode question number 389
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        d = Counter(s)
+
+        for ch in t:
+            if ch not in d:
+                return ch
+            d[ch] -= 1
+            if d[ch] == 0:
+                del d[ch]
+
+# with bit manipulation
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        result = 0
+        for ch in s:
+            result ^= ord(ch)
+        for ch in t:
+            result ^= ord(ch)
+        return chr(result)
