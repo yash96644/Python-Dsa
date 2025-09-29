@@ -171,3 +171,9 @@ else:
     return True 
 
 
+# leetcode 268
+
+n = len(nums)
+expected_sum = n * (n + 1) // 2
+actual_sum = sum(nums)
+missing_number = expected_sum - actual_sum
