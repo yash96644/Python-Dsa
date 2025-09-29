@@ -177,3 +177,18 @@ n = len(nums)
 expected_sum = n * (n + 1) // 2
 actual_sum = sum(nums)
 missing_number = expected_sum - actual_sum
+
+# other approach
+return sum(range(len(nums) + 1)) - sum(nums)
+
+#leetcode 448 
+for n in nums:
+    i = abs(n) - 1
+    nums[i] = -1 * abs(nums[i])
+
+res = []
+for i , n in enumerate(nums):
+    if n > 0:
+        res.append(i + 1)
+return res
+
