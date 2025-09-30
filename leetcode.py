@@ -192,3 +192,10 @@ for i , n in enumerate(nums):
         res.append(i + 1)
 return res
 
+# leetcode 1
+hashMap = {}
+for i, num in enumerate(nums):
+    complement = target - num
+    if complement in hashMap:
+        return [hashMap[complement], i]
+    hashMap[num] = i
