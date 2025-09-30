@@ -199,3 +199,15 @@ for i, num in enumerate(nums):
     if complement in hashMap:
         return [hashMap[complement], i]
     hashMap[num] = i
+
+# leetcode 1365
+
+temp = sorted((nums))
+d ={}
+for i, num in enumerate(temp):
+    if num not in d:
+        d[num] = i
+res = []
+for num in nums:
+    res.append(d[num])  
+return res
