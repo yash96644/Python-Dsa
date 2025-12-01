@@ -254,3 +254,14 @@ def reverseVowels(s: str) -> str:
             i += 1
             j -= 1
     return ''.join(s)
+
+# leetcode 121
+
+minPorift = float('inf')
+maxProfit = 0
+for price in prices:
+    if price < minPorift:
+        minPorift = price
+    else:
+        maxProfit = max(maxProfit , price - minPorift)
+    return maxProfit
