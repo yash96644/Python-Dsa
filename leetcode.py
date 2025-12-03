@@ -273,3 +273,13 @@ n = len(nums)
 for i in range(len(nums)):
     if ((i == 0 or nums[i] > nums[i-1] ) and (i==n -1 or nums[i] >  nums[i+1])):
         return i    
+
+
+#leetcode 122
+
+
+profit = 0
+for  i in range(1 , len(prices)):
+    if prices[i] > prices[i-1]:
+        profit += (prices[i] - prices[i-1])
+return profit
