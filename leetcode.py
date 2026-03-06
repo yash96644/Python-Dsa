@@ -284,23 +284,19 @@ for  i in range(1 , len(prices)):
         profit += (prices[i] - prices[i-1])
 return profit
 
+# leetcode 205
 
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        res = ''
-        
-        for ch in s:
-            if ch.isalnum():
-                res += ch.lower()
-
-        left = 0
-        right = len(res) - 1
-
-        while left < right:
-            if res[left] != res[right]:
-                return False
-            
-            left += 1
-            right -= 1
-
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        dt = {}
+        values = set()
+        for i , char in enumerate(s):
+            if char not in dt:
+                if t[i] in values:
+                    return False
+                dt[char] = t[i]
+                values.add(t[i])
+            else:
+                if dt[char] != t[i]:
+                    return False
         return True
