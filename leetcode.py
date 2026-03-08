@@ -300,3 +300,14 @@ class Solution:
                 if dt[char] != t[i]:
                     return False
         return True
+# geek for geeks question sum of maximum sum of k consecutive elements in an array
+class Solution:
+    def maxSubarraySum(self, arr, k):
+        # code here 
+        window_sum = sum(arr[:k])
+        max_sum = window_sum
+        for i in range(k ,len(arr)):
+            window_sum += arr[i] -  arr[i-k]
+            max_sum = max(max_sum , window_sum)
+        return max_sum
+        
