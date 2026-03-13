@@ -349,3 +349,21 @@ for char in s:
     if count(char) == 1:
         print(char)
         break
+
+
+s = "madam"
+start = 0
+end = len(s) -1
+while start < end:
+    if s[start] != s[end]:
+        print("no")
+        break
+    left += 1
+    right -=1
+else:
+    print("yes")
+
+
+if s == s[::-1]:
+    print("yes")    
+else:    print("no")
