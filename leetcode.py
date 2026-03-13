@@ -324,3 +324,11 @@ class Solution:
                 current_sum -= nums[left]
                 left += 1
         return min_length if min_length != 100010 else 0
+
+
+s = "hello"
+res = ''
+for char in s:
+    if char <= 'a' or char <= 'z':
+        res += chr(ord(char) - 32)
+print(res)
