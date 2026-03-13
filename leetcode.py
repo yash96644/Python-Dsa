@@ -332,3 +332,20 @@ for char in s:
     if char <= 'a' or char <= 'z':
         res += chr(ord(char) - 32)
 print(res)
+
+s = 'swiss'
+empty = {}
+for char in s:
+    if char in empty:
+        empty[char] +=1
+    else:
+        empty[char] = 1
+for i in range(len(s)):
+    if empty[s[i]] == 1:
+        print(i)
+        break
+
+for char in s:
+    if count(char) == 1:
+        print(char)
+        break
