@@ -377,3 +377,14 @@ for char in s:
         empty[char] = 1
 
 print(max(empty , key = empty.get))
+
+
+
+
+s = "i love Python"
+word = s.split()
+long = ''
+for words in word:
+    if len(words) >= len(long):
+        long = words
+print(long)
