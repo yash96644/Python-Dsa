@@ -388,3 +388,15 @@ for words in word:
     if len(words) >= len(long):
         long = words
 print(long)
+
+s= 'aaabbcc'
+emp = {}
+for char in s:
+    if char in empty:
+        emp[char] +=1
+    else:
+        emp[char] = 1
+res = ' '
+for key , value in emp.items():
+    res += key + str(value)
+print(res)
