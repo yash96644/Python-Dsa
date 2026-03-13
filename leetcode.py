@@ -367,3 +367,13 @@ else:
 if s == s[::-1]:
     print("yes")    
 else:    print("no")
+
+s = 'hello'
+empty ={}
+for char in s:
+    if char in empty:
+        empty[char] += 1
+    else:
+        empty[char] = 1
+
+print(max(empty , key = empty.get))
