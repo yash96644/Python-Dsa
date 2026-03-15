@@ -457,3 +457,13 @@ for op in operatores:
     else:
         res -= 1
 print(res)
+
+
+#leetcode 3760
+seen = []
+count = 0 
+for char in s:
+    if char not in seen:
+        seen.append(char)
+        count += 1
+print(count)
