@@ -441,3 +441,19 @@ class Solution:
                 totle += curr
             prv = curr
         print(totle)
+
+
+    #
+   ##
+  ###
+ ####
+
+
+ #leetcode 2011
+res = 0
+for op in operatores:
+    if op[1] == "+":
+        res += 1
+    else:
+        res -= 1
+print(res)
