@@ -480,3 +480,12 @@ for i in range(len(s)):
     charcount.add(s[i])
     res = max(res , i - l+1)
 return res
+
+second max elemet         
+arr = [12,35,1,10,34,1]
+arr.sort()
+maxnumber = 0
+for i in range(len(arr) -1):
+    if arr[i] < arr[i+1]:
+        maxnumber = arr[i]
+print(maxnumber)
